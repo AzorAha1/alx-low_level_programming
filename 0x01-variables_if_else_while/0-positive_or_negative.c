@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ *  main - This is a description
+ *
+ *  Return: Always (Success)
+ */
 int main(void)
 {
 	int n;
@@ -14,16 +16,18 @@ int main(void)
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
-		
 	}
 	else if (n < 0)
 	{
 		printf("%d is negative\n", n);
-	} 
+	}
+
 	else
+
 	{
 		printf("%d is zero\n", n);
-	}	
+	}
+
 	return (0);
 }
 
