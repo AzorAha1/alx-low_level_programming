@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 /**
  *  main - This is a description
  *
@@ -11,9 +10,12 @@ int main(void)
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
-		char upper = toupper(alpha);
 		putchar(alpha);
-		putchar(upper);
+	}
+
+	for (alpha = 'A'; alpha <= 'Z'; alpha++)
+	{
+		putchar(alpha);
 	}
 	putchar('\n');
 	return (0);
