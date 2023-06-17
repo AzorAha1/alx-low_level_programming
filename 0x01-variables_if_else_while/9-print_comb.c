@@ -12,10 +12,10 @@ int main(void)
         {
                 putchar('0' + num);
 		putchar(',');
+		putchar(' ');
                 num++;
         }
 	
-	putchar('$');
         putchar('\n');
         return (0);
 
