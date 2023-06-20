@@ -12,18 +12,15 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		printf("+");
-		return (1);
+		printf("+1");
 	}
 	else if (n == 0)
 	{
-		return (0);
-		printf("0");
+		printf("00");
 	}
 	else if (n < 0)
 	{
-		return (-1);
-		printf("-");
+		printf("-1");
 	}
 	return (0);
 }
