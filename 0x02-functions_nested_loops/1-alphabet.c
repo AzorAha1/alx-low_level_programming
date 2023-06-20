@@ -3,6 +3,7 @@
 /**
  *  main - This is a description
  *  print_alphabet - description
+ *  print
  *  Return: Always (Success)
  */
 void print_alphabet(void)
