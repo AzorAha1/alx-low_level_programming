@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "_putchar.c"
-#include "main.c"
+#include "1-main.c"
 /**
  *  main - This is a description
  *
