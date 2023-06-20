@@ -7,18 +7,13 @@
  *  Return: Always (Success)
  */
 void print_alphabet(void);
-int main(void)
-{
-	 print_alphabet();
-	_putchar('\n');
-	return (0);
-}
 void print_alphabet(void)
 {
 	char alpha;
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
 		_putchar(alpha);
+		_putchar('\n');
 	}
 }
 
