@@ -3,13 +3,12 @@
 
 /**
  * _islower - check upper or lowercase.
- * Description: 'the program's description'
  * @c - takes input
  * Return: Always 0 (Success)
  */
 int _islower(int c)
 {
-	if (islower(c))
+	if (a >= 97 && a <= 122)
 	{
 		return (1);
 	}
