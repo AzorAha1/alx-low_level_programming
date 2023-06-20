@@ -15,7 +15,7 @@ void print_alphabet_x10(void)
 	{
 		for (alphax10 = 'a'; alphax10 <= 'z'; alphax10++)
 		{
-			_putchar(alphax10);
+			putchar(alphax10);
 		}
 		printf("\n");
 	}
