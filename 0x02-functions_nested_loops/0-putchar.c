@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <main.h>
 /**
  *  main - This is a description
  *
@@ -8,5 +7,4 @@
 int main(void)
 {
 	printf("_putchar\n");
-	return (0);
 }
