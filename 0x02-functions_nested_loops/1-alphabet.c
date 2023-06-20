@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  *  main - This is a description
- *  Description: function
+ *  print_alphabet - description
  *  Return: Always (Success)
  */
 void print_alphabet(void)
