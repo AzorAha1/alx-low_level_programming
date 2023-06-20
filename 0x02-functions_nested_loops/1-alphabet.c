@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
- *  main - This is a description
- *  print_alphabet - description
- *  print
- *  Return: Always (Success)
+ * print_alphabet - Prints the alphabet in lowercase.
+ * Description: 'the program's description'
+ * Return: Always 0 (Success)
  */
 void print_alphabet(void)
 {
