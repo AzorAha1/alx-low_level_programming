@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "_putchar.c"
+#include "main.h"
 /**
  *  main - This is a description
  *
@@ -8,7 +9,7 @@
 void print_alphabet(void);
 int main(void)
 {
-	void print_alphabet();
+	 print_alphabet();
 	_putchar('\n');
 	return (0);
 }
