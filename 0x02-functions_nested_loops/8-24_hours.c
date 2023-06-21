@@ -3,7 +3,7 @@
 
 /**
  * jack_bauer - print last digit of a  number.
- * @n: takes input
+ * @void: takes nothing
  *
  * Description - this is the description
  * Return: Always 0 (Success)
