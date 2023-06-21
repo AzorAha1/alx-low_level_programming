@@ -11,8 +11,10 @@
  */
 int _abs(int n)
 {
-	int absolute = abs(n);
-	putchar(absolute);
+	if (n >= 0) ? n : -n
+	{
+		printf("%d", n)
+	}
 	return (0);
 }
 
