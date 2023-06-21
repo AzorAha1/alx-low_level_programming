@@ -14,7 +14,7 @@ int _abs(int n)
 	int absolute;
 
 	absolute = abs(n); 
-	putchar(absolute);
+	printf("%d", absolute);
 	return (0);
 }
 
