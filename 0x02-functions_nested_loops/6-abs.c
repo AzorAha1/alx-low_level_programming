@@ -4,22 +4,14 @@
 
 /**
  * int_abs - print sign of number.
- * @abs: takes input
+ * @n: takes input
  *
  * Description - this is the description
  * Return: Always 0 (Success)
  */
-int _abs(int abs)
+int _abs(int n)
 {
-	if (abs >= 0)
-	{
-		abs = abs;
-	}
-	else
-	{
-		abs = -abs;
-	}
-
+	printf("%d", abs(n));
 	return (0);
 }
 
