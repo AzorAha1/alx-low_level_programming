@@ -12,6 +12,7 @@
 int _abs(int n)
 {
 	int absolute = abs(n);
+	printf("absolute of %d is %d", n, absolute);
 	return (0);
 }
 
