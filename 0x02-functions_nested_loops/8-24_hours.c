@@ -9,8 +9,8 @@
  * Return: Always 0 (Success)
  */
 void jack_bauer(void) {
-    int minute;
-    int hour;
+    int minute = 0;
+    int hour = 0;
 	
 	while (hour < 24)
 	{
