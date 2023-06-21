@@ -11,13 +11,15 @@
  */
 int _abs(int n)
 {
+	int abs;
+
 	if (n >= 0)
 	{
-		n = n;
+		abs = n;
 	}
 	else
 	{
-		n = -n;
+		abs = -n;
 	}
 
 	return (0);
