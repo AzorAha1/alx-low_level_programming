@@ -4,22 +4,20 @@
 
 /**
  * int_abs - print sign of number.
- * @n: takes input
+ * @abs: takes input
  *
  * Description - this is the description
  * Return: Always 0 (Success)
  */
-int _abs(int n)
+int _abs(int abs)
 {
-	int abs;
-
-	if (n >= 0)
+	if (abs >= 0)
 	{
-		abs = n;
+		abs = abs;
 	}
 	else
 	{
-		abs = -n;
+		abs = !abs;
 	}
 
 	return (0);
