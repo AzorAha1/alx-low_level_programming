@@ -9,9 +9,13 @@
  * Return: Always 0 (Success)
  */
 void jack_bauer(void) {
-    int i;
-    
-    for(i = 0; i <= 1440; i++){
-        printf("%d\n", i);
+    int minute;
+    int hour;
+    for(hour = 0; hour <= 24; i++){
+        for (minute = 0; minute <= 59 ; minute++)
+	{
+		printf("%02d:%02d", hour, minute)
+	}
+	minute = 0;
     }
 }
