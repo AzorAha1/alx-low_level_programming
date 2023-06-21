@@ -11,7 +11,10 @@
  */
 int _abs(int n)
 {
-	printf("%d", abs(n));
+	int absolute;
+
+	absolute = abs(n) 
+	printf("%d", absolute);
 	return (0);
 }
 
