@@ -11,8 +11,6 @@
 int print_last_digit(int n)
 {
 	int last_digit = n % 10;
-	for (int i in range(2))
-	{
-		printf("%d", lastdigit, end='');
-	}
+	_putchar(n + '0');
+	return (last_digit);
 }
