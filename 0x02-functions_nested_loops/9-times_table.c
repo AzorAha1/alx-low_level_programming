@@ -19,7 +19,7 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			k = i * j;
-			printf("%d, ", k);
+			printf("%-5d", k);
 		}
 		printf("\n");
 	}
