@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_last_digit - print last digit of a  number.
+ * jack_bauer - print last digit of a  number.
  * @n: takes input
  *
  * Description - this is the description
