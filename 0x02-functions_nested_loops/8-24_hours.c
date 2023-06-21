@@ -12,15 +12,15 @@ void jack_bauer(void) {
     int minute;
     int hour;
 	
-    while (hour < 24)
-    {
-	    minute = 0;
-	    hour++;
-	    while (minute <= 59)
-	    {
-		    printf("%02d:%02d", hour, minute);
-		    minute++;
-	    }
-
-    }
+	while (hour < 24)
+	{
+	while (minute <= 59)
+	{
+		printf("%02d:%02d\n", hour, minute);
+		minute++;
+	}
+		minute = 0;
+		hour++;
+	}
 }
+
