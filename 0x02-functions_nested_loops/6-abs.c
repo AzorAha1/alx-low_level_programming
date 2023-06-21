@@ -17,7 +17,7 @@ int _abs(int abs)
 	}
 	else
 	{
-		abs = !abs;
+		abs = -abs;
 	}
 
 	return (0);
