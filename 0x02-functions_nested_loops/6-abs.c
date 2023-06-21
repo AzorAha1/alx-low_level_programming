@@ -14,7 +14,7 @@ int _abs(int n)
 	int absolute;
 
 	absolute = abs(n); 
-	_putchar(absolute);
+	putchar(absolute);
 	return (0);
 }
 
