@@ -11,7 +11,7 @@
 void jack_bauer(void) {
     int minute;
     int hour;
-    for(hour = 0; hour <= 24; i++){
+    for(hour = 0; hour <= 24; hour++){
         for (minute = 0; minute <= 59 ; minute++)
 	{
 		printf("%02d:%02d", hour, minute)
