@@ -13,7 +13,7 @@ int _abs(int n)
 {
 	int absolute;
 
-	absolute = abs(n) 
+	absolute = abs(n); 
 	printf("%d", absolute);
 	return (0);
 }
