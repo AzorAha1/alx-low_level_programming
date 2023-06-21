@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * int_abs - print sign of number.
+ * _abs - print sign of number.
  * @n: takes input
  *
  * Description - this is the description
@@ -13,7 +13,7 @@ int _abs(int n)
 {
 	int absolute;
 
-	absolute = abs(n); 
-	return absolute;
+	absolute = abs(n);
+	return (absolute);
 }
 
