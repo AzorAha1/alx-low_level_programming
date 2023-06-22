@@ -3,7 +3,6 @@
 /**
  * print_to_98 - print to 98
  * @n: takes input 
- *
  * Description - this is the description
  * Return: Always 0 (success)
 */
