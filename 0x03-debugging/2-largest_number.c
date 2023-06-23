@@ -22,7 +22,7 @@ int largest_number(int a, int b, int c)
 	}
 	else
 	{
-		largest = c
+		largest = c;
 	}
 
 	print("%d is the largesst number", largest);
