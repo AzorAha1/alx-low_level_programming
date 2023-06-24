@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-
+#include "_putchar.c"
 /**
  * print_numbers - print from 0-9
  * @void: takes nothing
@@ -13,6 +13,7 @@ void print_numbers(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		printf("%d\n", i);
+		_putchar(i);
+		_putchar('\n');
 	}
 }
