@@ -16,7 +16,7 @@ void print_line(int n)
 	{
 		printf("\n");
 	}
-	for (i = 0; i <= n; i++)
+	for (i; i <= n; i++)
 	{
 		printf("%c", c);
 	}
