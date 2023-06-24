@@ -19,7 +19,7 @@ void print_line(int n)
 	else
 	{
 
-		for (i; i < n; i++)
+		for (; i < n; i++)
 		{
 			printf("%c", c);
 		}
