@@ -22,5 +22,6 @@ void print_line(int n)
 		{
 			printf("%c", c);
 		}
+		printf("%c", c);
 	}
 }
