@@ -16,12 +16,10 @@ void print_line(int n)
 	{
 		printf("\n");
 	}
-	else
+	for (i = 0; i <= n; i++)
 	{
-		for (; i < n; i++)
-		{
-			printf("%c", c);
-		}
 		printf("%c", c);
 	}
+	printf("\n");
+
 }
