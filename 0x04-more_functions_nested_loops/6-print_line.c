@@ -18,7 +18,6 @@ void print_line(int n)
 	}
 	else
 	{
-
 		for (; i < n; i++)
 		{
 			printf("%c", c);
