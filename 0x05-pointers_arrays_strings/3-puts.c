@@ -9,6 +9,6 @@
  */
 void _puts(char *str)
 {
-	fprintf(stdout,  str);
+	fprintf(stdout, "%c/n" str);
 
 }
