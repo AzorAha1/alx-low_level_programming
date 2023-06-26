@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 #include "string.h"
+
 /**
- * swap_int - reset to 98
- * @a: takes int size
- * @b: takes int
+ * _strlen - getting string length
+ * @s: char s
  * Description - this is the description
  * Return: return value type
  */
