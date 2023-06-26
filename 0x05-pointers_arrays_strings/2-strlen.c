@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-
+#include "string.h"
 /**
  * swap_int - reset to 98
  * @a: takes int size
@@ -10,9 +10,7 @@
  */
 int _strlen(char *s)
 {
-	char i[] = *s;
-	
-	len = _strlen(i);
+	int len = strlen(s);
 	
 	return (len);
 }
