@@ -9,6 +9,7 @@
  */
 void _puts(char *str)
 {
-	putc(str);
+	puts(str);
+	putc(stdout);
 
 }
