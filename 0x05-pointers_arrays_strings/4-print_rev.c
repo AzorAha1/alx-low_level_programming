@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-
+#include <string.h>
 /**
  * _puts - getting string length
  * @str: char s
@@ -9,5 +9,5 @@
  */
 void print_rev(char *s)
 {
-	puts(strev(str));
+	puts(strev(s));
 }
