@@ -9,6 +9,6 @@
  */
 void print_rev(char *s)
 {
-	char reversed[] = strrev(s);
+	char reversed = strrev(s);
 	puts(reversed);	
 }
