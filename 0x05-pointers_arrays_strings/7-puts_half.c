@@ -19,11 +19,11 @@ void puts_half(char *str)
 	{
 		if (l % 2 == 0)
 		{
-			printf("%c", str[i]);
+			_putchar(str[i])
 		}
 		else
 		{
-			printf("%c", str[n]);
+			_putchar(str[n]);
 		}
 	}
 
