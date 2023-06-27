@@ -9,6 +9,6 @@
  */
 void _puts(char *str)
 {
-	putchar(str);
+	puts(str);
 
 }
