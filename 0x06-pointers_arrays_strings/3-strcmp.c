@@ -17,10 +17,9 @@ int _strcmp(char *s1, char *s2)
 	{
 		return (15);
 	}
-	else
+	else if (strcmp(s1, s2) == 0)
 	{
 		return (0);
 	}
-
 	return (0);
 }
