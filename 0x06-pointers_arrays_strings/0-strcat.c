@@ -2,8 +2,8 @@
 #include<string.h>
 /**
  * _strcat - function to concatenate
- * @dest - takes char
- * @src - takes char
+ * @dest: takes char
+ * @src: takes char
  * Description - this is the description
  * Return - this is the return type
  */
