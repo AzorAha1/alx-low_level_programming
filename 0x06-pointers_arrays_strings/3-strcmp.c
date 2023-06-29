@@ -1,11 +1,10 @@
 #include<stdio.h>
 #include<string.h>
 /**
- * _strncpy - function to concatenate two strings with the use of n
- * @dest: this takes char
- * @src: this takes char
- * @n: this takes int
- * Description - this function concatenates two strings
+ * _strcmp - function to concatenate two strings with the use of n
+ * @s1: this takes char
+ * @s2: this takes char
+ * Description - strcmp
  * Return: this this the return type
  */
 int _strcmp(char *s1, char *s2)
