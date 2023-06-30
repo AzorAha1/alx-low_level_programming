@@ -13,18 +13,13 @@ char *cap_string(char *p)
 
 	for (i = 0; p[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (i == 0 || !isalpha(p[i - 1]))
 		{
-			if (p[i] >= 'a' && p[i] <= 'z')
+			if(islower(p[i]))
 			{
 				p[i] = toupper(p[i]);
 			}
 		}
-		else if (!isalpha(p[i - 1]))
-			if (p[i] >= 'a' && p[i] <= 'z')
-			{
-				p[i] = toupper(p[i]);
-			}
 	}
 	return (p);
 }
