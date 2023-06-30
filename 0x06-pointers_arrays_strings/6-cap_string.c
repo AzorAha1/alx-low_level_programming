@@ -37,7 +37,7 @@ char *cap_string(char *p)
 			{
 				p[i] = toupper(p[i]);
 			}
-		}	
+		}
 	}
 	return (p);
 }
