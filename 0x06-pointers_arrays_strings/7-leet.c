@@ -10,13 +10,12 @@
 char *leet(char *p)
 {
 	int i;
+	int j;
 	char *leet = "aAeEoOtT";
 	char *leet_replace = "44330077";
 
 	for (i = 0;  p[i] != '\0'; i++)
 	{
-		int j;
-
 		for (j = 0; leet[j] != '\0'; j++)
 		{
 			if (p[i] == leet[j])
