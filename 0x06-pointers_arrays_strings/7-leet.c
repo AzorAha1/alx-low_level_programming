@@ -2,7 +2,7 @@
 #include<string.h>
 #include<ctype.h>
 /**
- * cap_string - function to capitalize
+ * leet - function to replace
  * @p: this takes char
  * Description - uppercase
  * Return: this this the return type
@@ -16,6 +16,7 @@ char *leet(char *p)
 	for (i = 0;  p[i] != '\0'; i++)
 	{
 		int j;
+
 		for (j = 0; leet[j] != '\0'; j++)
 		{
 			if (p[i] == leet[j])
