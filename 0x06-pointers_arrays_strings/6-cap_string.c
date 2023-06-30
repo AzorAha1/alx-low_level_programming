@@ -21,10 +21,10 @@ char *cap_string(char *p)
 			}
 		}
 		else if (!isalpha(p[i - 1]))
-		if (p[i] >= 'a' && p[i] <= 'z')
-		{
-			p[i] = toupper(p[i]);
-		}
+			if (p[i] >= 'a' && p[i] <= 'z')
+			{
+				p[i] = toupper(p[i]);
+			}
 	}
 	return (p);
 }
