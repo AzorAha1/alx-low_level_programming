@@ -33,3 +33,4 @@ char *cap_string(char *p)
 		}
 	}
 	return (p);
+}
