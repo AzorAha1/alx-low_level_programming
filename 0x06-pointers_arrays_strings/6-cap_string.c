@@ -17,8 +17,8 @@ char *cap_string(char *p)
 		{
 			if (i == 0 ||
 					p[i - 1] == ' ' ||
-					p[i - 1] == '\t'||
-					p[i - 1] == '\n'||
+					p[i - 1] == '\t' ||
+					p[i - 1] == '\n' ||
 					p[i - 1] == ',' ||
 					p[i - 1] == ';' ||
 					p[i - 1] == '.' ||
@@ -30,7 +30,7 @@ char *cap_string(char *p)
 					p[i - 1] == '{' ||
 					p[i - 1] == '}')
 			{
-				p[i] = p[i] - 32;
+				p[i] = toupper(p[i]);
 			}
 		}
 	}
