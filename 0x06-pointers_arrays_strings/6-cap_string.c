@@ -13,7 +13,7 @@ char *cap_string(char *p)
 
 	for (i = 0; p[i] != '\0'; i++)
 	{
-		if (p[i] >= 'a' && p[i] <= 'z')
+		if (islower(p[i]))
 		{
 			if (i == 0 ||
 					p[i - 1] == ' ' ||
@@ -28,7 +28,7 @@ char *cap_string(char *p)
 					p[i - 1] == '{' ||
 					p[i - 1] == '}')
 			{
-				p[i] = p[i] - 32;
+				p[i] = toupper((unsigned char)p[i]);
 			}
 		}
 	}
