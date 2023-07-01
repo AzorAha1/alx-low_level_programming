@@ -11,12 +11,12 @@ char *leet(char *p)
 {
 	int i;
 	int j;
-	char leet[] = "aAeEoOtT";
-	char leet_replace[] = "44330077";
+	char leet[] = "aAeEoOtTlL";
+	char leet_replace[] = "4433007711";
 
 	for (i = 0;  p[i] != '\0'; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; leet[j] != '\0'; j++)
 		{
 			if (p[i] == leet[j])
 			{
