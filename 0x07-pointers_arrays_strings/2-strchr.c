@@ -9,13 +9,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	char str = strchr(s, c);
-	if (str)
-	{
-		return (s);
-	}
-	else
-	{
-		return (NULL);
-	}
+	strchr(s, c);
+	return (s);
 }
