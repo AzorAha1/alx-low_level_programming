@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * _strpbrk - strchr function
- * @s: takes char
- * @accept: takes char
+ * print_chessboard - print_chessboard function
+ * @a: takes char
  * Description - function
  * Return: return type
  */
