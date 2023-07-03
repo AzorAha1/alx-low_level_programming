@@ -9,6 +9,13 @@
  */
 char *_strchr(char *s, char c)
 {
-	strchr(s, c);
-	return (s);
+	char *str = strchr(s, c);
+	if (str != ' ')
+	{
+		return (str);
+	}
+	else
+	{
+		return (NULL);
+	}
 }
