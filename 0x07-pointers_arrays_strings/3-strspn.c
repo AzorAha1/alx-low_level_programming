@@ -10,5 +10,6 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int pos = strspn(s, accept);
+
 	return (pos);
 }
