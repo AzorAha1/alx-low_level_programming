@@ -10,7 +10,7 @@
 char *_strchr(char *s, char c)
 {
 	char *str = strchr(s, c);
-	if (str != ' ')
+	if (str)
 	{
 		return (str);
 	}
