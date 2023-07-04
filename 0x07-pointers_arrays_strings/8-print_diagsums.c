@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * print_chessboard - print_chessboard function
- * @a: takes char
+ * print_diagsums - print_chessboard function
+ * @a: takes int
+ * @size: takes int
  * Description - function
  * Return: return type
  */
@@ -17,6 +18,5 @@ void print_diagsums(int *a, int size)
 		main += a[i * size + i];
 		sec += a[i * size + (size - 1 - i)];
 	}
-	printf("%d\n", main);
-	printf("%d\n", sec);
+	printf("%d, %d\n", main, sec);
 }
