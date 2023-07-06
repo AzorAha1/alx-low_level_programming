@@ -12,7 +12,7 @@ void _print_rev_recursion(char *s)
 	int l;
 
 	l = strlen(s);
-	for (i = l - 1; i <= 0; i--)
+	for (i = l; i >= 0; i--)
 	{
 		printf("%c", s[i]);
 	}
