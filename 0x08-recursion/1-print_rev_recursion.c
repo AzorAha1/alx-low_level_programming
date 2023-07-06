@@ -14,6 +14,7 @@ void _print_rev_recursion(char *s)
 	}
 	else
 	{
-		printf("%c", _print_rev_recursion(s + 1));
+		char new[] =  _print_rev_recursion(s + 1);
+		printf("%c", new);
 	}
 }
