@@ -6,7 +6,7 @@
  * Description - function
  * Return: return type
  */
-int _strnlen_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	int l;
 
