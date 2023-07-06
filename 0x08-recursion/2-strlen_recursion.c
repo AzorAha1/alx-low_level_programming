@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * _print_rev_recursion - print string
+ * _strlen_recursion - print string
  * @s: takes char
  * Description - function
  * Return: return type
  */
-void _print_rev_recursion(char *s)
+int _strlen_recursion(char *s)
 {
-	int i;
+	int l;
 
-	if 
+	l = strlen(s);
+	return (l);
 }
