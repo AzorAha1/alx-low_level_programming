@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include<math.h>
 /**
  * _pow_recursion - pow
  * @x: takes int
@@ -10,8 +9,16 @@
  */
 int _pow_recursion(int x, int y)
 {
-	double result;
-
-	result = pow(x, y);
-	return (result);
+	if (y < 0)
+	{
+		return (-1);
+	}
+	else if (y == 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return x * _pow_recursion(x, y - 1);
+	}
 }
