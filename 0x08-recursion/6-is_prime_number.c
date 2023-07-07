@@ -18,9 +18,13 @@ int isprime(int number, int prime)
 	{
 		return (0);
 	}
+	else if (prime * prime > number)
+	{
+		return (1);
+	}
 	else 
 	{
-		return isprime(number, prime + 1);
+		return (isprime(number, prime + 1));
 	}
 }
 /**
@@ -31,5 +35,5 @@ int isprime(int number, int prime)
  */
 int is_prime_number(int n)
 {
-	return isprime(n, 2);
+	return (isprime(n, 2));
 }
