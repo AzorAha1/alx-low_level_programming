@@ -7,18 +7,22 @@
  * Description - function
  * Return: return type
  */
-int _sqrt_recursion(int n)
+int _sqr(int number, int root)
 {
-	if (n < 0)
+	if ((root * root) > number || number < 0)
 	{
 		return (-1);
 	}
-	else if (n == 1)
+	else if ((root * root) == number)
 	{
-		return (1);
+		return (root);
 	}
 	else 
 	{
-		return n * _sqrt_recursion(n - 1);
+		return (_sqr(number, root + 1));
 	}
+}
+int _sqrt_recursion(int n)
+{
+	return (_sqr(n, 0));
 }
