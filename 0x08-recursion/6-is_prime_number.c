@@ -12,7 +12,7 @@ int isprime(int number, int prime)
 {
 	if (number <= 1)
 	{
-		return (-1);
+		return (0);
 	}
 	else if (number % prime == 0)
 	{
@@ -22,7 +22,7 @@ int isprime(int number, int prime)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (isprime(number, prime + 1));
 	}
