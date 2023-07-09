@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * main - print string
+ * main - main
  * @argc: argument count
  * @argv: argument vector
  * Description - function
@@ -9,6 +9,6 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	printf("%d\n", argc);
 	return (0);
 }
