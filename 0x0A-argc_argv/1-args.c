@@ -8,14 +8,8 @@
  * Return: return type
  */
 int main(int argc, char *argv[])
-{
-	int i;
-
-	printf("%d\n", argc);
-	for (i = 0; i < argc;i++)
-		if (argc > 1)
-		{
-			printf("%s", argv[i]);
-		}
+{	
+	(void)argv;
+	printf("%d", argc);
 	return (0);
 }
