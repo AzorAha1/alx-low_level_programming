@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include<stdlib.h>
+#include<ctype.h>
 /**
  * main - main
  * @argc: argument count
@@ -17,7 +18,17 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			sum += atoi(argv[i]);
+			char *checker;
+			int num = strtol(argv[i], &checker, 10);
+			if (*checker != '\0')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else 
+			{
+				sum += num;
+			}
 		}
 		printf("%d\n", sum);
 	}
