@@ -20,12 +20,13 @@ int main(int argc, char *argv[])
 		{
 			char *checker;
 			int num = strtol(argv[i], &checker, 10);
+
 			if (*checker != '\0')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else 
+			else
 			{
 				sum += num;
 			}
