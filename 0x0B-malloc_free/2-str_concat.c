@@ -10,11 +10,11 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char* p;
+	char *p;
 	size_t s1len;
 	size_t s2len;
 	size_t total;
-	
+
 	if (s1 == NULL)
 	{
 		s1 = "";
