@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * _strdup - function name
- * @str: takes char
+ * str_concat - function name
+ * @s1: takes char
+ * @s2: takes char
  * Description - this is the description
  * Return: return type
  */
@@ -20,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	s1len = strlen(s1);
 	s2len = strlen(s2);
-	total = s1len + s2len; 
+	total = s1len + s2len;
 	p = (char *)malloc(total + 1 * sizeof(char));
 	strcat(p, s1);
 	strcat(p, s2);
