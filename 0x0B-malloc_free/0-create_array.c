@@ -8,12 +8,13 @@
  * Return: return type
  */
 char *create_array(unsigned int size, char c)
-{	
+{
 	unsigned int i;
+	char *ptr;
 
-	char *ptr = malloc(size * sizeof(char));
-	
-	if (ptr == 0)
+	ptr = (char*)malloc(size * sizeof(char));
+
+	if (size == 0 || ptr == NULL)
 	{
 		return (NULL);
 	}
@@ -21,5 +22,5 @@ char *create_array(unsigned int size, char c)
 	{
 		ptr[i] = c;
 	}
-	return (ptr);
+	return ptr;
 }
