@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	size_t s2len;
 	size_t total;
 
-	if (s1 == NULL || s2 == NULL || p == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
 	}
@@ -23,6 +23,10 @@ char *str_concat(char *s1, char *s2)
 	s2len = strlen(s2);
 	total = s1len + s2len;
 	p = (char *)malloc(total + 1 * sizeof(char));
+	if (p == NULL)
+	{
+		return (NULL);
+	}
 	strcat(p, s1);
 	strcat(p, s2);
 	return (p);
