@@ -14,7 +14,7 @@ void free_grid(int **grid, int height)
 	int j;
 	int **p;
 	
-	if (width <= 0 || height <= 0)
+	if (height <= 0)
 	{
 		return (NULL);
 	}
