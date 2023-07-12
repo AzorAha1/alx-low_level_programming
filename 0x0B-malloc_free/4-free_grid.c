@@ -8,7 +8,7 @@
  * Description - this is the description
  * Return: return type
  */
-free free_grid(int **grid, int height)
+free_grid(int **grid, int height)
 {
 	int i;
 	int j;
