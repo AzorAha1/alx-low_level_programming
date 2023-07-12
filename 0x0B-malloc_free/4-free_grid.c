@@ -10,32 +10,5 @@
  */
 void free_grid(int **grid, int height)
 {
-	int i;
-	int j;
-	int **p;
-	
-	if (height <= 0)
-	{
-		return (NULL);
-	}
-	p = (int **)malloc(height * sizeof(int *));
-	if (p == NULL)
-	{
-		free(p);
-		return (NULL);
-	}
-	for (i = 0; i < height; i++)
-	{
-		p[i] = (int *)malloc(width * sizeof(int));
-	}
-	for (i = 0; i < height; i++)
-	{
-		for (j = 0; j < width; j++)
-		{
-			free(grid[j]);
-			p[i][j] = 0;
-		}
-	}
-	free(p);
 }
 
