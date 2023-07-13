@@ -11,10 +11,10 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	size_t s1len;
-	size_t s2len;
-	size_t total;
-	size_t s2vn;
+	size_t s1len = 0;
+	size_t s2len = 0;
+	size_t total = 0;
+	size_t s2vn = 0;
 	char *p;
 
 	if (s1 == NULL)
