@@ -41,6 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
+	memset(p, 0,(total + 1) * sizeof(char));
 	strcat(p, s1);
 	strncat(p, s2, s2vn);
 	return (p);
