@@ -11,11 +11,11 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	size_t s1len = 0;
-	size_t s2len = 0;
-	size_t total = 0;
-	size_t s2vn = 0;
-	char *p = NULL;
+	size_t s1len;
+	size_t s2len;
+	size_t total;
+	size_t s2vn;
+	char *p;
 
 	if (s1 == NULL)
 	{
@@ -42,7 +42,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	strcat(p, s1);
-	strcat(p, s2);
-	p[s1len + s2vn] = '\0';
+	strncat(p, s2, s2vn);
 	return (p);
 }
