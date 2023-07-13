@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * string_nconcat - function name
- * @s1: takes char
- * @s2: takes char
- * @n: takes unsigned int
+ * _calloc - function name
+ * @nmemb: takes unsigned int
+ * @size: takes unsigned int
  * Description - this is the description
  * Return: return type
  */
@@ -27,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = (char *)p;
 	for (i = 0; i < size; i++)
 	{
-		 ptr[i] = (char)nmemb;
+		ptr[i] = (char)nmemb;
 	}
 	return (p);
 }
