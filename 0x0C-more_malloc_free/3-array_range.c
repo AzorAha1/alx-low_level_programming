@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	total = max - min + 1;
+	total = max + min;
 	p = (int *)calloc(total, sizeof(int));
 	if (p == NULL)
 	{
