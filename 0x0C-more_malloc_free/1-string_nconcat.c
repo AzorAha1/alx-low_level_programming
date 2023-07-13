@@ -17,6 +17,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size_t s2vn;
 	char *p;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	s1len = strlen(s1);
 	s2len = strlen(s2);
 	if (n >= s2len)
@@ -32,14 +40,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (p == NULL)
 	{
 		return (NULL);
-	}
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
 	}
 	strcat(p, s1);
 	strcat(p, s2);
