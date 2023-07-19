@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * str_concat - function name
- * @s1: takes char
- * @s2: takes char
+ * print_name - function name
+ * @name: takes char
+ * @f: function pointer
  * Description - this is the description
  * Return: return type
  */
