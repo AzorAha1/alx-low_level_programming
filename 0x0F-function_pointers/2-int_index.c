@@ -10,12 +10,9 @@ int cmp(int i)
 {
 	if (i > 0)
 	{
-		return (1)
+		return (1);
 	}
-	if (i <= 0)
-	{
-		return (-1);
-	}
+	return (-1);
 }
 /**
  * int_index - function name
