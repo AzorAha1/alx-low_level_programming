@@ -2,14 +2,30 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * int index - function name
+ * cmp - function
+ * @i: takes i
+ * Description - description
+ * Return: return type
+ */
+int cmp(int i)
+{
+	if (i <= 0 || !isdigit(i))
+	{
+		return (-1);
+	}
+	else
+	{
+		return (1);
+	}
+}
+/**
+ * int_index - function name
  * @array: takes int pointer
  * @size: size_t
  * @cmp: function pointer
  * Description - this is the description
  * Return: return type
  */
-int cmp(int i);
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
@@ -23,15 +39,4 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	}
 	return (-1);
-}
-int cmp(int i)
-{
-	if (i <= 0 || !isdigit(i))
-	{
-		return (-1);
-	}
-	else
-	{
-		return (1);
-	}
 }
