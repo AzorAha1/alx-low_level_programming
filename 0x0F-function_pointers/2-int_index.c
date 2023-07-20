@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
  * cmp - function
  * @i: takes i
@@ -9,13 +8,13 @@
  */
 int cmp(int i)
 {
-	if (i <= 0 || !isdigit(i))
+	if (i > 0)
+	{
+		return (1)
+	}
+	if (i <= 0)
 	{
 		return (-1);
-	}
-	else
-	{
-		return (1);
 	}
 }
 /**
