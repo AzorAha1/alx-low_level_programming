@@ -84,7 +84,7 @@ void print_all(const char * const format, ...)
 		}
 		else if (format[i] == 'i')
 		{
-			print_int(arguments)
+			print_int(arguments);
 		}
 		else if (format[i] == 'f')
 		{
