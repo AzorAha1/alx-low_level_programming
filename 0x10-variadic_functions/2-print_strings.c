@@ -30,7 +30,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-		printf("%s", x);
+		else
+		{
+			printf("%s", x);
+		}
 	}
 	va_end(arguments);
 	printf("\n");
