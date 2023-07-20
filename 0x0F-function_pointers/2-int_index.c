@@ -12,7 +12,7 @@ int cmp(int i)
 	{
 		return (1);
 	}
-	return (-1)
+	return (-1);
 }
 /**
  * int_index - function name
