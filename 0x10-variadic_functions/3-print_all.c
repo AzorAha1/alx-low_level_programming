@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	char c;
 	int integer;
 	double flo;
-	char* ch;
+	char *ch;
 
 	i = 0;
 	va_start(arguments, format);
