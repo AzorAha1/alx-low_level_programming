@@ -71,45 +71,32 @@ void print_all(const char * const format, ...)
 {
 	va_list arguments;
 	int i;
-	int count;
+	int format_l;
 
 	i = 0;
-	count = 0;
+	format_l = strlen(format);
 	va_start(arguments, format);
-	while (i < format[i])
+	while (i < format_l)
 	{
-		if (format[i] == 'c' || format[i] == 'i' || format[i] == 's' || format[i] == 'f')
-		{
-			count++;
-		}
-		i++;
-	}
-	i = 0;
-	while (format[i])
-	{
-		if (i > 0 && count > 0)
+		if (i > 0 && format[i] != '\0')
 		{
 			printf(", ");
 		}
 		if (format[i] == 'c')
 		{
 			print_char(arguments);
-			count--;
 		}
 		else if (format[i] == 'i')
 		{
 			print_int(arguments);
-			count--;
 		}
 		else if (format[i] == 'f')
 		{
 			print_double(arguments);
-			count--;
 		}
 		else if (format[i] == 's')
 		{
 			print_string(arguments);
-			count--;
 		}
 		i++;
 	}
