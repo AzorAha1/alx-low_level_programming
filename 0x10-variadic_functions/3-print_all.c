@@ -70,10 +70,10 @@ void print_all(const char * const format, ...)
 	int i;
 	int format_l;
 
-	i = 0;
 	format_l = strlen(format);
+	i = 0;
 	va_start(arguments, format);
-	while (i < format_l)
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
