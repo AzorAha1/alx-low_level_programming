@@ -105,6 +105,8 @@ void print_all(const char * const format, ...)
 			case 's':
 				print_string(arguments);
 				break;
+			default:
+				break;
 		}
 		i++;
 	}
