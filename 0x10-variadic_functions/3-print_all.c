@@ -82,21 +82,25 @@ void print_all(const char * const format, ...)
 		{
 			printf(", ");
 		}
-		if (format[i] == 'c')
+		switch (format[i])
 		{
-			print_char(arguments);
+			case 'c':
+				print_char(arguments);
 		}
-		else if (format[i] == 'i')
+		switch (format[i])
 		{
-			print_int(arguments);
+			case 'i':
+				print_int(arguments);
 		}
-		else if (format[i] == 'f')
+		switch (format[i])
 		{
-			print_double(arguments);
+			case 'f':
+				print_double(arguments);
 		}
-		else if (format[i] == 's')
+		switch (format[i])
 		{
-			print_string(arguments);
+			case 's':
+				print_string(arguments);
 		}
 		i++;
 	}
