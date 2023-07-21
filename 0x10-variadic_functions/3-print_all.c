@@ -69,35 +69,35 @@ void print_all(const char * const format, ...)
 	va_list arguments;
 	int i;
 	int format_l;
-	int is_pre;
+	int is_first_specifier = 1;
 
 	i = 0;
-	is_pre = 0;
 	format_l = strlen(format);
 	va_start(arguments, format);
 	while (i < format_l)
 	{
-		if (is_pre)
+		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+				format[i] == 's')
 		{
+			if (is_first_specifier)
+			{
+				is_first_specifier = 0;
+			}
 			printf(", ");
 		}
 		switch (format[i])
 		{
 			case 'c':
 				print_char(arguments);
-				is_pre = 1;
 				break;
 			case 'i':
 				print_int(arguments);
-				is_pre = 1;
 				break;
 			case 'f':
 				print_double(arguments);
-				is_pre = 1;
 				break;
 			case 's':
 				print_string(arguments);
-				is_pre = 1;
 				break;
 			default:
 				break;
