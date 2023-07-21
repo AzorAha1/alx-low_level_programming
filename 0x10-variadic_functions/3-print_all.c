@@ -70,43 +70,46 @@ void print_string(va_list arguments)
 void print_all(const char * const format, ...)
 {
 	va_list arguments;
-	int format_l;
 	int i;
+	int count;
 
 	i = 0;
+	count = 0;
 	va_start(arguments, format);
-	format_l = strlen(format);
-	while (i < format_l)
+	while (i < format[i])
 	{
-		if (i > 0)
+		if (format[i] == 'c' || format[i] == 'i' || format[i] == 's' || format[i] == 'f')
+		{
+			count++;
+		}
+		i++;
+	}
+	i = 0;
+	while (format[i])
+	{
+		if (i > 0 && count > 0)
 		{
 			printf(", ");
 		}
-		switch (format[i])
+		if (format[i] == 'c')
 		{
-			case 'c':
-				print_char(arguments);
-				break;
+			print_char(arguments);
+			count--;
 		}
-		switch (format[i])
+		else if (format[i] == 'i')
 		{
-			case 'i':
-				print_int(arguments);
-				break;
+			print_int(arguments);
+			count--;
 		}
-		switch (format[i])
+		else if (format[i] == 'f')
 		{
-			case 'f':
-				print_double(arguments);
-				break;
+			print_double(arguments);
+			count--;
 		}
-		switch (format[i])
+		else if (format[i] == 's')
 		{
-			case 's':
-				print_string(arguments);
-				break;
-			default:
-				break;
+			print_string(arguments);
+			count--;
 		}
 		i++;
 	}
