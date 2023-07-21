@@ -75,11 +75,6 @@ void print_all(const char * const format, ...)
 	va_start(arguments, format);
 	while (i < format_l)
 	{
-		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-				format[i] == 's')
-		{
-			printf(", ");
-		}
 		switch (format[i])
 		{
 			case 'c':
@@ -96,6 +91,12 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 				break;
+		}
+		if (i != format_l - 1 && (format[i] == 'c' || format[i] == 'i' ||
+					format[i] == 'f' ||
+					format[i] == 's'))
+		{
+			printf(", ");
 		}
 		i++;
 	}
