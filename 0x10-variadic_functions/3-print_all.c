@@ -79,10 +79,6 @@ void print_all(const char * const format, ...)
 		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
 				format[i] == 's')
 		{
-			if (is_first_specifier)
-			{
-				is_first_specifier = 0;
-			}
 			printf(", ");
 		}
 		switch (format[i])
