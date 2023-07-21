@@ -89,8 +89,6 @@ void print_all(const char * const format, ...)
 			case 's':
 				print_string(arguments);
 				break;
-			default:
-				break;
 		}
 		if (i != format_l - 1 && (format[i] == 'c' || format[i] == 'i' ||
 					format[i] == 'f' ||
