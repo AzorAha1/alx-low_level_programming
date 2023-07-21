@@ -69,7 +69,6 @@ void print_all(const char * const format, ...)
 	va_list arguments;
 	int i;
 	int format_l;
-	int is_first_specifier = 1;
 
 	i = 0;
 	format_l = strlen(format);
