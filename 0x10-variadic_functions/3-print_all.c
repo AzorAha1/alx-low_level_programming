@@ -78,6 +78,10 @@ void print_all(const char * const format, ...)
 	format_l = strlen(format);
 	while (i < format_l)
 	{
+		if (i > 0)
+		{
+			printf(", ");
+		}
 		if (format[i] == 'c')
 		{
 			print_char(arguments);
