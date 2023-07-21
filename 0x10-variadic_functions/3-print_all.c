@@ -69,13 +69,15 @@ void print_all(const char * const format, ...)
 	va_list arguments;
 	int i;
 	int format_l;
+	int is_pre;
 
 	i = 0;
+	is_pre = 0;
 	format_l = strlen(format);
 	va_start(arguments, format);
 	while (i < format_l)
 	{
-		if (i > 0 && format[i] != '\0')
+		if (is_pre)
 		{
 			printf(", ");
 		}
@@ -83,24 +85,19 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				print_char(arguments);
+				is_pre = 1;
 				break;
-		}
-		switch (format[i])
-		{
 			case 'i':
 				print_int(arguments);
+				is_pre = 1;
 				break;
-		}
-		switch (format[i])
-		{
 			case 'f':
 				print_double(arguments);
+				is_pre = 1;
 				break;
-		}
-		switch (format[i])
-		{
 			case 's':
 				print_string(arguments);
+				is_pre = 1;
 				break;
 			default:
 				break;
