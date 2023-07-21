@@ -86,21 +86,25 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				print_char(arguments);
+				break;
 		}
 		switch (format[i])
 		{
 			case 'i':
 				print_int(arguments);
+				break;
 		}
 		switch (format[i])
 		{
 			case 'f':
 				print_double(arguments);
+				break;
 		}
 		switch (format[i])
 		{
 			case 's':
 				print_string(arguments);
+				break;
 		}
 		i++;
 	}
