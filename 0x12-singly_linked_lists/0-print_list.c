@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-#include <stddef.h>
 /**
  * print_list - name
  * @h: parameter
@@ -21,7 +20,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%lu] %s\n", count, h->str);
+			printf("%s\n", h->str);
 		}
 		count++;
 	}
