@@ -21,6 +21,10 @@ int wildcmp_finder(char *string1, char *string2)
 	{
 		return (1);
 	}
+	if (*string2 == '*')
+	{
+		return (1);
+	}
 	return (wildcmp_finder(string1 + 1, string2  - 1));
 }
 /**
