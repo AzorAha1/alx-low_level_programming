@@ -19,9 +19,9 @@ int wildcmp_finder(char *string1, char *string2)
 	}
 	if (checker == 1)
 	{
-		return (0);
+		return (1);
 	}
-	return wildcmp_finder(string1 + 1, string2  - 1);
+	return (wildcmp_finder(string1 + 1, string2  - 1));
 }
 /**
  * wildcmp - function name
