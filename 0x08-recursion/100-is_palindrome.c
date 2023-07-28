@@ -11,11 +11,11 @@ int is_palindrome(char *s)
 {
 	int i;
 	int find_center = strlen(s) / 2;
-	int s_len = strlen(s - 1);
+	int s_len = strlen(s);
 
 	for (i = 0; i < find_center; i++)
 	{
-		if (s[i] != s[s_len - 1 - i])
+		if (s[i] != s[s_len - i - 1])
 		{
 			return (0);
 		}
