@@ -8,5 +8,8 @@
  */
 void printsomething(void)
 {
-	printf("You're beat! and yet, you much allow,\nI bore my house upon my back!\n");
+	char *w;
+
+	w = "You're beat and yet, you must allow, \nI bore my house upon my back!\n";
+	printf("%s", w);
 }
