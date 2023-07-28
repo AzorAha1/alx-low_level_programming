@@ -18,6 +18,10 @@ int wildcmp_finder(char *string1, char *string2)
 	{
 		return (1);
 	}
+	if (string2 == special_char)
+	{
+		return (1);
+	}
 	else
 	{
 		return (0);
