@@ -11,19 +11,19 @@
 int wildcmp_finder(char *string1, char *string2)
 {
 	int checker;
-
+	char *special_char = strchr(string2, '*');
 	checker = strcmp(string1, string2);
 	if (checker == 0)
 	{
+		return (1);
+	}
+	if (special_char != NULL)
+	{
+		return (1);
+	}
+	else
+	{
 		return (0);
-	}
-	if (checker == 1)
-	{
-		return (1);
-	}
-	if (*string2 == '*' || *string2 == ' ')
-	{
-		return (1);
 	}
 	return (wildcmp_finder(string1 + 1, string2  - 1));
 }
