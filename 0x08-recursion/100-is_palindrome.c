@@ -11,7 +11,7 @@ int is_palindrome(char *s)
 {
 	int i;
 	int find_center = strlen(s) / 2;
-	int s_len = strlen(s-1);
+	int s_len = strlen(s - 1);
 
 	for (i = 0; i < find_center; i++)
 	{
