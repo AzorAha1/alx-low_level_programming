@@ -14,6 +14,7 @@ int wildcmp_finder(char *string1, char *string2)
 	char *special_char = strchr(string2, '*');
 	
 	checker = strcmp(string1, string2);
+
 	if (checker == 0)
 	{
 		return (1);
