@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
+
+int palindrome_finder(int first, int last, char *str)
+{
+	if (first >= last)
+	{
+		return (1);
+	}
+	else if (str[first] != str[last])
+	{
+		return (0);
+	}
+	return palindrome_finder(first + 1, last - 1, str);
+}	
 /**
  * is_palindrome - function name
  * @s: parameter name
@@ -9,16 +22,6 @@
  */
 int is_palindrome(char *s)
 {
-	int i;
-	int find_center = strlen(s) / 2;
 	int s_len = strlen(s);
-
-	for (i = 0; i < find_center; i++)
-	{
-		if (s[i] != s[s_len - i - 1])
-		{
-			return (0);
-		}
-	}
-	return (1);
+	return palindrome_finder(0, s_len, s);
 }
