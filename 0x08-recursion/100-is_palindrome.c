@@ -15,7 +15,7 @@ int palindrome_finder(int first, int last, char *str)
 	{
 		return (1);
 	}
-	else if (str[first] != str[last])
+	if (str[first] != str[last])
 	{
 		return (0);
 	}
@@ -29,7 +29,7 @@ int palindrome_finder(int first, int last, char *str)
  */
 int is_palindrome(char *s)
 {
-	int s_len = strlen(s);
+	int s_len = strlen(s) - 1;
 
 	return (palindrome_finder(0, s_len, s));
 }
