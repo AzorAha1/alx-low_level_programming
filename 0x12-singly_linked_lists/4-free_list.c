@@ -11,6 +11,7 @@
 void free_list(list_t *head)
 {
 	list_t *new = malloc(sizeof(list_t));
+
 	head = new;
 
 	if (new == NULL)
