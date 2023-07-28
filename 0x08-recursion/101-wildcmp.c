@@ -21,7 +21,7 @@ int wildcmp_finder(char *string1, char *string2)
 	{
 		return (1);
 	}
-	if (*string2 == '*')
+	if (*string2 == '*' || *string2 == ' ')
 	{
 		return (1);
 	}
