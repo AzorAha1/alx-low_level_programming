@@ -6,6 +6,7 @@
  * Description - this is the description
  * Return: void
  */
+void printsomething (void) __attribute__((constructor));
 void printsomething(void)
 {
 	char *w;
