@@ -19,7 +19,19 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error");
+		printf("Error\n");
+		exit(98);
+	}
+	else if (arith != '-' || arith != '+' ||
+	arith != '%' || arith != '*' || arith != '/')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	else if (arith == '/' && second_input == 0)
+	{
+		printf("Error\n");
+		exit(100);
 	}
 	if (fget)
 	{
