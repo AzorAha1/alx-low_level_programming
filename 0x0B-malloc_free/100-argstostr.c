@@ -15,11 +15,12 @@ char *argstostr(int ac, char **av)
 	int check_len;
 	char *p_str;
 
+	check_len = 0;
 	if (ac == 0 || *av == NULL)
 	{
 		return (NULL);
 	}
-	p_str = (char *)malloc(sizeof(char) + 1);
+	p_str = (char *)malloc(4096);
 	if (av == NULL)
 	{
 		return (NULL);
@@ -27,7 +28,7 @@ char *argstostr(int ac, char **av)
 	for (i = 1; i < ac; i++)
 	{
 		check_len += strlen(av[i]);
-	} 
+	}
 	for (i = 0; i < ac; i++)
 	{
 		strcat(p_str, av[i]);
