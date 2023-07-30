@@ -22,13 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	else if (arith != '-' || arith != '+' ||
-	arith != '%' || arith != '*' || arith != '/')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	else if (arith == '/' && second_input == 0)
+	else if (*arith == '/' && second_input == 0)
 	{
 		printf("Error\n");
 		exit(100);
@@ -41,6 +35,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
+		exit (99);
 	}
 	return (0);
 }
