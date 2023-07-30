@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	else if (*arith == '/' || *arith == '%' && second_input == 0)
+	else if (*arith == '/' || (*arith == '%' && second_input == 0))
 	{
 		printf("Error\n");
 		exit(100);
