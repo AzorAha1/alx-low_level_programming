@@ -16,13 +16,16 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL},
 	};
 	int i;
-	while (i)
+	
+	i = 0;
+
+	while (ops[i].op != NULL)
 	{
-		if (*s != '+' || *s != '-' || *s != '/' || *s != '%' || *s != '*')
+		if (*s == *(ops[i].op))
 		{
-			return (NULL);
+			return (ops[i].fget);
 		}
+		i++;
 	}
-	(*get_op_func(ops)(int, int));
-	return (0);
+	return (NULL);
 }
