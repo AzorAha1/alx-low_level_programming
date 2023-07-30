@@ -14,8 +14,10 @@ char *argstostr(int ac, char **av)
 	int i;
 	size_t check_len;
 	char *p_str;
+	size_t location;
 
 	check_len = 0;
+	location = 0;
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
@@ -24,17 +26,23 @@ char *argstostr(int ac, char **av)
 	{
 		check_len += strlen(av[i]);
 	}
-	p_str = (char *)calloc(check_len + 1, 1);
+	check_len += ac - 1;
+	p_str = (char *)malloc(check_len + 1);
 	if (p_str == NULL)
 	{
 		return (NULL);
 	}
-	p_str[0] = '\0';
 	for (i = 0; i < ac; i++)
 	{
-		strcat(p_str, av[i]);
-		strcat(p_str, "\n");
+		strcpy(p_str + location, av[i]);
+		location += strlen(av[i]);
+		if (i < ac - 1)
+		{
+			p_str[location] = '\n';
+			location++;
+		}
 
 	}
+	p_str[location] = '\0';
 	return (p_str);
 }
