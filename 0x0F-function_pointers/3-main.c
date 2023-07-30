@@ -27,5 +27,19 @@ int main(int argc, char *argv[])
 		output = fget(first_input, second_input);
 		printf("%d\n", output);
 	}
+	if (arith == '/' && second_input == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	else if (arith == '%' && second_input == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	else
+	{
+		printf("Error\n");
+	}
 	return (0);
 }
