@@ -12,7 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i;
-	int check_len;
+	size_t check_len;
 	char *p_str;
 
 	check_len = 0;
