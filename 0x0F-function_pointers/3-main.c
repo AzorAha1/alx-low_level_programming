@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (fget)
 	{
 		output = fget(first_input, second_input);
-		printf("%d\n",output);
+		printf("%d\n", output);
 	}
 	else
 	{

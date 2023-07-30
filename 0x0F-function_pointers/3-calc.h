@@ -4,7 +4,7 @@
  * struct op - Struct op
  *
  * @op: The operator
- * @fgeet: The function associated
+ * @fget: The function associated
  */
 typedef struct op
 {
