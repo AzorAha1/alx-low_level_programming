@@ -20,15 +20,15 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	if (av == NULL)
-	{
-		return (NULL);
-	}
 	for (i = 1; i < ac; i++)
 	{
 		check_len += strlen(av[i]);
 	}
 	p_str = (char *)malloc(check_len + 1);
+	if (p_str == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < ac; i++)
 	{
 		strcat(p_str, av[i]);
