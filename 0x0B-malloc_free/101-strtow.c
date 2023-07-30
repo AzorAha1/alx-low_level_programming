@@ -19,7 +19,7 @@ char **strtow(char *str)
 	dub_str = strdup(str);
 	str_piece = strtok(dub_str, " ");
 
-	while(str_piece != NULL)
+	while (str_piece != NULL)
 	{
 		printf("%s\n", str_piece);
 		str_piece = strtok(NULL, " ");
