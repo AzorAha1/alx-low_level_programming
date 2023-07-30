@@ -16,19 +16,20 @@ char *argstostr(int ac, char **av)
 	char *p_str;
 
 	check_len = 0;
-	if (ac == 0 || *av == NULL)
+	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		check_len += strlen(av[i]);
 	}
-	p_str = (char *)malloc(check_len + 1);
+	p_str = (char *)malloc(check_len);
 	if (p_str == NULL)
 	{
 		return (NULL);
 	}
+	p_str[0] = '\0';
 	for (i = 0; i < ac; i++)
 	{
 		strcat(p_str, av[i]);
