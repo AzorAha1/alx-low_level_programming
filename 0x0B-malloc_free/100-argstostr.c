@@ -36,12 +36,11 @@ char *argstostr(int ac, char **av)
 	{
 		strcpy(p_str + location, av[i]);
 		location += strlen(av[i]);
-		if (i < ac - 1)
+		if (i < ac)
 		{
 			p_str[location] = '\n';
 			location++;
 		}
-
 	}
 	p_str[location] = '\0';
 	return (p_str);
