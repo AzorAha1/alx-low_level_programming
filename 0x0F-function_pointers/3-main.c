@@ -16,27 +16,28 @@ int main(int argc, char *argv[])
 	int second_input = atoi(argv[3]);
 	int output;
 	int (*fget)(int, int) = get_op_func(arith);
-
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	else if (*arith != '+' || *arith != '-' || *arith != '*' ||
-		*arith != '/' || *arith != '%')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	else if (*arith == '/' || (*arith == '%' && second_input == 0))
-	{
-		printf("Error\n");
-		exit(100);
-	}
+	
 	if (fget)
 	{
 		output = fget(first_input, second_input);
 		printf("%d\n", output);
+	}
+	else
+	{
+		if (argc != 4)
+		{
+			printf("Error\n");
+			exit(98);
+		}
+		if (*arith != '+' || *arith != '-' || *arith != '*' ||
+		*arith != '/' || *arith != '%')
+			printf("Error\n");
+		exit(99);
+	}
+	if (*arith == '/' || (*arith == '%' && second_input == 0))
+	{
+		printf("Error\n");
+		exit(100);
 	}
 	return (0);
 }
