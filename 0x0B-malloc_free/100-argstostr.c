@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	p_str = (char *)malloc(4096);
+	p_str = (char *)malloc(4156);
 	if (av == NULL)
 	{
 		return (NULL);
