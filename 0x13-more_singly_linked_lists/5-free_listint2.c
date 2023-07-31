@@ -12,7 +12,7 @@ void free_listint2(listint_t **head)
 	listint_t *newnode;
 
 	newnode = *head;
-	if (newnode == NULL)
+	if (head == NULL || *head == NULL)
 	{
 		return;
 	}
@@ -22,4 +22,5 @@ void free_listint2(listint_t **head)
 		free(*head);
 		*head = newnode;
 	}
+	*head = NULL;
 }
