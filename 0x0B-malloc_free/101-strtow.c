@@ -15,7 +15,7 @@ char **strtow(char *str)
 	int  counter;
 	int i;
 	char **alloc;
-	
+
 	thewords = NULL;
 	counter = 0;
 	if (str == NULL)
