@@ -11,7 +11,7 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *sub;
-	int nextele;
+	int n;
 
 	if (*head == NULL)
 	{
@@ -21,8 +21,8 @@ int pop_listint(listint_t **head)
 	{
 		sub = *head;
 		*head = (*head)->next;
-		nextele = sub->n;
+		n = sub->n;
 		free(sub);
 	}
-	return (nextele);
+	return (n);
 }
