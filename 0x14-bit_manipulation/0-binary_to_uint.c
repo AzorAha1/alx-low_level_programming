@@ -17,13 +17,10 @@ unsigned int binary_to_uint(const char *b)
 	sum = 0;
 	b_len = strlen(b);
 	multiplier = 1;
-	if (b == NULL)
-	{
-		return (0);
-	}
+
 	for (i = (b_len - 1); i >= 0; i--)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i] != '0' && b[i] != '1' && b == NULL)
 		{
 			return (0);
 		}
