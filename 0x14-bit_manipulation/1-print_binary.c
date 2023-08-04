@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdint.h>
 /**
  * print_binary - function name
  * @n: char b
@@ -8,12 +9,12 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned bit = 1 << 31;
+	uint64_t bit = 1UL << 63;
 	unsigned int i;
 	int mask;
 
 	mask = 1;
-	for (i = 1; i <= 32; i++)
+	for (i = 1; i <= 64; i++)
 	{
 		if (n & bit)
 		{
