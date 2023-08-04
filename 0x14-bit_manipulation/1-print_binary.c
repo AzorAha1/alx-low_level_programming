@@ -8,23 +8,25 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i;
-	int check;
+	unsigned bit = 1 << 31;
+	unsigned int i;
+	int mask;
 
-	check = 0;
-	for (i = 1UL << 31; i > 0; i >>= 1)
+	mask = 1;
+	for (i = 1; i <= 32; i++)
 	{
-		if (n & i)
+		if (n & bit)
 		{
+			mask = 0;
 			printf("1");
-			check = 1;
 		}
-		else if (check)
+		else if (mask != 1)
 		{
 			printf("0");
 		}
+		n = n << 1;
 	}
-	if (check == 0)
+	if (mask)
 	{
 		printf("0");
 	}
