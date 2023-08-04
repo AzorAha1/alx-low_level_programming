@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  * binary_to_uint - function name
  * @b: char b
@@ -26,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 		{
-			return (0);
+			 return (0);
 		}
 	}
 	for (i = (b_len - 1); i >= 0; i--)
