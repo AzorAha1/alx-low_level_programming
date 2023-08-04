@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * print_binary - function name
- * @b: char b
+ * @n: char b
  * Description - converting binary to unsigned int
  * Return: return unsigned int
  */
