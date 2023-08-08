@@ -12,9 +12,10 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buffer[1024];
+	int length;
 	int fp;
-	ssize_t numletter;
+	ssize_t getcount;
+	char buffer[letters + 1];
 
 	fp = open(filename, O_RDONLY);
 
@@ -23,10 +24,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fp);
 		return (0);
 	}
-	numletters = read(fp, buffer, letters);
+	getcount  = read(fp, buffer, letters);
 
 	buffer[letters] = '\0';
-	printf("%s", buffer);
+	write(STDOUT_FILENO, buffer, getcount);
 	close(fp);
-	return (numletters);
+	return (getcount);
 }
