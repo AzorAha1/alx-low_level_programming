@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <fcntl.h>
+#include <unistd.h>
 /**
  * read_textfile - function name
  * @filename: argument
@@ -11,25 +12,19 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fptr;
 	char buffer[1024];
-	size_t num_of_letters;
+	int fp;
 
-	fptr = fopen(filename, "r");
+	fp = open(filename, O_RDONLY);
 
-	if (fptr == NULL)
+	if (fp == -1)
 	{
+		close(fp);
 		return (0);
 	}
-	if (filename == NULL)
-	{
-		return (0);
-	}
-	num_of_letters = fread(buffer, sizeof(char), letters, fptr);
-	if (num_of_letters > 0)
-	{
-		buffer[num_of_letters] = '\0';
-	}
-	fclose(fptr);
-	return (num_of_letters);
+	letters = read(fp, buffer, sizeof(buffer) - 1);
+
+	buffer[letters] = '\0';
+	printf("%s", buffer);
+	return (letters);
 }
