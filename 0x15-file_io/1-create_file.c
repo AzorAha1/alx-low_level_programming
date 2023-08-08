@@ -15,7 +15,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fp, getwrite;
+	int fp;
+	ssize_t getwrite;
 
 	fp = open(filename, O_CREAT | O_RDWR | O_TRUNC);
 	if (fp == -1)
@@ -25,15 +26,12 @@ int create_file(const char *filename, char *text_content)
 	getwrite = write(fp, text_content, strlen(text_content));
 	if (getwrite == -1)
 	{
+		close(fp);
 		return (-1);
 	}
-	if (filename == NULL)
+	if (filename == NULL || text_content)
 	{
 		return (-1);
-	}
-	if (text_content == NULL)
-	{
-		fp = open(filename, O_CREAT);
 	}
 	close(fp);
 	return (getwrite);
