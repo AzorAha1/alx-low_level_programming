@@ -14,6 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char buffer[1024];
 	int fp;
+	ssize_t numletter;
 
 	fp = open(filename, O_RDONLY);
 
@@ -22,10 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fp);
 		return (0);
 	}
-	letters = read(fp, buffer, sizeof(buffer) - 1);
+	numletters = read(fp, buffer, letters);
 
 	buffer[letters] = '\0';
 	printf("%s", buffer);
 	close(fp);
-	return (letters);
+	return (numletters);
 }
