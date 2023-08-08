@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 	if (filename == NULL)
 	{
-		fclose(fp);
+		close(fp);
 		return (0);
 	}
 	if (fp == -1)
