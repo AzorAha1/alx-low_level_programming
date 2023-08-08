@@ -15,12 +15,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char buffer[1024];
 	size_t num_of_letters;
 
-	letters = 200;
 	fptr = fopen(filename, "r");
 
 	if (fptr == NULL)
 	{
 		fclose(fptr);
+		return (0);
+	}
+	if (filename == NULL)
+	{
 		return (0);
 	}
 	num_of_letters = fread(buffer, sizeof(char), letters, fptr);
@@ -29,5 +32,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		buffer[num_of_letters] = '\0';
 	}
 	fclose(fptr);
-	return(0);
+	return (num_of_letters);
 }
