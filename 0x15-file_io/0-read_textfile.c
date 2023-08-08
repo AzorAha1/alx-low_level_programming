@@ -16,12 +16,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t getcount;
 	char buffer[BUFFERSIZE + 1];
 
-	fp = open(filename, O_RDONLY);
 	if (filename == NULL)
 	{
-		close(fp);
 		return (0);
 	}
+	fp = open(filename, O_RDONLY);
 	if (fp == -1)
 	{
 		return (0);
