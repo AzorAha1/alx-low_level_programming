@@ -13,26 +13,40 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fp;
-	ssize_t getcount,getwrite;
-	char buffer[BUFFERSIZE + 1];
+	ssize_t getcount, getwrite;
+	char *buffer;
 
 	if (filename == NULL)
+	{
+		return (0);
+	}
+	buffer = malloc(sizeof(sizeof(char) * letters));
+	if (buffer == NULL)
 	{
 		return (0);
 	}
 	fp = open(filename, O_RDONLY);
 	if (fp == -1)
 	{
+		free(buffer);
 		return (0);
 	}
 	getcount  = read(fp, buffer, letters);
+	if (getcount == -1)
+	{
+		free(buffer);
+		close(fp);
+		return (0);
 
+	}
 	getwrite = write(STDOUT_FILENO, buffer, getcount);
 	if (getwrite != getcount || getwrite == -1)
 	{
+		free(buffer);
 		close(fp);
-		return(0);
+		return (0);
 	}
+	free(buffer);
 	close(fp);
 	return (getcount);
 }
