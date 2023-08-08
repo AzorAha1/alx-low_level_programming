@@ -13,7 +13,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fp;
-	ssize_t getcount;
+	ssize_t getcount,getwrite;
 	char buffer[BUFFERSIZE + 1];
 
 	if (filename == NULL)
@@ -27,7 +27,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	getcount  = read(fp, buffer, letters);
 
-	write(STDOUT_FILENO, buffer, getcount);
+	getwrite = write(STDOUT_FILENO, buffer, getcount);
+	if (getwrite != getcount || getwrite == -1)
+	{
+		close(fp);
+		return(0);
+	}
 	close(fp);
 	return (getcount);
 }
