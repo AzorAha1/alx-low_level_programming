@@ -34,19 +34,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	getcount  = read(fp, buffer, letters);
 	if (getcount == -1)
 	{
-		free(buffer);
 		close(fp);
+		free(buffer);
 		return (0);
 
 	}
 	getwrite = write(STDOUT_FILENO, buffer, getcount);
 	if (getwrite != getcount || getwrite == -1)
 	{
-		free(buffer);
 		close(fp);
+		free(buffer);
 		return (0);
 	}
-	free(buffer);
 	close(fp);
+	free(buffer);
 	return (getcount);
 }
