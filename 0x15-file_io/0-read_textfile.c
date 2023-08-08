@@ -12,10 +12,9 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int length;
 	int fp;
 	ssize_t getcount;
-	char buffer[letters + 1];
+	char buffer[BUFFERSIZE + 1];
 
 	fp = open(filename, O_RDONLY);
 
