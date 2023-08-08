@@ -18,7 +18,8 @@ int create_file(const char *filename, char *text_content)
 	int fp;
 	ssize_t getwrite;
 
-	if (!filename || !text_content)
+	text_content = "\0";
+	if (!filename)
 	{
 		return (-1);
 	}
@@ -27,11 +28,14 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	getwrite = write(fp, text_content, strlen(text_content));
-	if (getwrite == -1)
+	if (text_content != NULL)
 	{
-		close(fp);
-		return (-1);
+		getwrite = write(fp, text_content, strlen(text_content));
+		if (getwrite == -1)
+		{
+			close(fp);
+			return (-1);
+		}
 	}
 	close(fp);
 	return (1);
