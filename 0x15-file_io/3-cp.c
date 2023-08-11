@@ -23,25 +23,18 @@ int main(const char *file_from, const char *file_to)
 		exit(98);
 	}
 	fp = open(file_from, O_CREAT | O_RDONLY | O_TRUNC, 0664);
-	if (fp = -1)
+	if (fp == -1)
 	{
 		perror("Error: Can't read from the file_to\n");
 		exit (98);
 	}
 	fp2 = open(file_to, O_WRONLY);
-	if (fp2 = -1)
+	if (fp2 == -1)
 	{
 		perror("Can't write to file_to\n");
 		exit (99);
 	}
-	getread = read(fp, buffer, sizeof(buffer));
-	if (getread == -1)
-	{
-		close(fp);
-		close(fp2);
-		return -1;
-	}
-	while (getread > 0)
+	while (getread = read(fp, buffer, sizeof(buffer)) > 0)
 	{
 		getwrite = write(fp2, buffer, getread);
 		if (getwrite == -1)
@@ -50,6 +43,12 @@ int main(const char *file_from, const char *file_to)
 			close(fp2);
 			return (-1);
 		}
+	}
+	if (getread == -1)
+	{
+		close(fp);
+		close(fp2);
+		return (-1);
 	}
 	close(fp);
 	close(fp2);
