@@ -22,7 +22,7 @@ int main(const char *file_from, const char *file_to)
 		perror("Error: Can't read from file_from\n");
 		exit(98);
 	}
-	fp = open(file_from, O_CREAT | O_RDONLY | O_TRUNC, 0664);
+	fp = open(file_from, O_RDONLY);
 	if (fp == -1)
 	{
 		perror("Error: Can't read from the file_to\n");
