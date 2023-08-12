@@ -21,15 +21,19 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_t\n");
+		dprintf(stderr, "Usage: cp file_from file_t\n");
 		exit(97);
 	}
 	file_from = argv[1];
 	file_to = argv[2];
-
-	fp = open(file_from, O_RDONLY | O_CREAT | O_TRUNC);
+	if (access(file_from, F_OK) == -1)
+	{
+		dprintf(stderr, "Error: Can't read from file file_from\n");
+		exit(98);
+	}
+	fp = open(file_from, O_RDONLY);
 	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fp2 == -1 || fp == -1)
+	if (fp2 == -1)
 	{
 		perror("Can't write to file_to\n");
 		exit(99);
