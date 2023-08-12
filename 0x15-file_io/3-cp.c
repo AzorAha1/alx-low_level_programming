@@ -21,14 +21,14 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(stderr, "Usage: cp file_from file_t\n");
+		dprintf(fileno(stderr), "Usage: %s file_from file_t\n", argv[0]);
 		exit(97);
 	}
 	file_from = argv[1];
 	file_to = argv[2];
 	if (access(file_from, F_OK) == -1)
 	{
-		dprintf(stderr, "Error: Can't read from file file_from\n");
+		perror("Error: Can't read from file file_from\n");
 		exit(98);
 	}
 	fp = open(file_from, O_RDONLY);
