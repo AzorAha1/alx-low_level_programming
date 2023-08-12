@@ -10,8 +10,15 @@
  * Description - this is the description
  * Return: return type
  */
-int main(const char *file_from, const char *file_to)
+int main(int argc, char **argv)
 {
+	if (argc != 3)
+	{
+		perror("Usage: cp file_from file_to");
+		exit(97);
+	}
+	const char *file_from = argv[1];
+	const char *file_to = argv[2];
 	int fp;
 	int fp2;
 	char buffer[1024];
@@ -28,7 +35,7 @@ int main(const char *file_from, const char *file_to)
 		perror("Error: Can't read from the file_to\n");
 		exit (98);
 	}
-	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC , 664);
+	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC);
 	if (fp2 == -1)
 	{
 		perror("Can't write to file_to\n");
