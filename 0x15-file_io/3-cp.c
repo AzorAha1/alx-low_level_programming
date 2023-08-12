@@ -12,18 +12,20 @@
  */
 int main(int argc, char **argv)
 {
-	if (argc != 3)
-	{
-		perror("Usage: cp file_from file_to");
-		exit(97);
-	}
-	const char *file_from = argv[1];
-	const char *file_to = argv[2];
+	const char *file_from;
+	const char *file_to;
 	int fp;
 	int fp2;
 	char buffer[1024];
 	ssize_t getread, getwrite;
 
+	if (argc != 3)
+	{
+		printf("Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	file_from = argv[1];
+	file_to = argv[2];
 	if (file_from == NULL)
 	{
 		perror("Error: Can't read from file_from\n");
