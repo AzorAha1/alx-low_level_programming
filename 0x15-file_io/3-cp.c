@@ -61,5 +61,5 @@ int main(int argc, char **argv)
 	}
 	close(fp);
 	close(fp2);
-return(1);
+	return(1);
 }
