@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 
 	fp = open(file_from, O_RDONLY);
 	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fp2 == -1 || fp1)
+	if (fp2 == -1 || fp == -1)
 	{
 		perror("Can't write to file_to\n");
 		exit(99);
