@@ -28,13 +28,13 @@ int main(const char *file_from, const char *file_to)
 		perror("Error: Can't read from the file_to\n");
 		exit (98);
 	}
-	fp2 = open(file_to, O_WRONLY);
+	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC , 664);
 	if (fp2 == -1)
 	{
 		perror("Can't write to file_to\n");
 		exit (99);
 	}
-	while (getread = read(fp, buffer, sizeof(buffer)) > 0)
+	while ((getread = read(fp, buffer, sizeof(buffer))) > 0)
 	{
 		getwrite = write(fp2, buffer, getread);
 		if (getwrite == -1)
@@ -52,5 +52,5 @@ int main(const char *file_from, const char *file_to)
 	}
 	close(fp);
 	close(fp2);
-	return(1);
+return(1);
 }
