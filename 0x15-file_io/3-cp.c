@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	file_from = argv[1];
 	file_to = argv[2];
 
-	fp = open(file_from, O_RDONLY);
+	fp = open(file_from, O_RDONLY | O_CREAT | O_TRUNC);
 	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fp2 == -1 || fp == -1)
 	{
