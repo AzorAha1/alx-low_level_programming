@@ -13,8 +13,7 @@
  */
 int main(int argc, char **argv)
 {
-	const char *file_from;
-	const char *file_to;
+	const char *file_from, *file_to;
 	int fp, fp2;
 	char buffer[1024];
 	ssize_t getread, getwrite;
@@ -28,10 +27,15 @@ int main(int argc, char **argv)
 	file_to = argv[2];
 	if (access(file_from, F_OK) == -1)
 	{
-		perror("Error: Can't read from file file_from\n");
+		perror("Error: Can't read from file %s\n", film_from);
 		exit(98);
 	}
 	fp = open(file_from, O_RDONLY);
+	if (fp == -1)
+	{
+		dprintf(fileno(stderr), "Error: Can't read from %s\n", film_from);
+		exit(100);
+	}
 	fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fp2 == -1)
 	{
