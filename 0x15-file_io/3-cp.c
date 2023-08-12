@@ -14,7 +14,7 @@
 int main(int argc, char **argv)
 {
 	const char *file_from, *file_to;
-	int fp, fp2;
+	int fp, fp2, check;
 	char buffer[1024];
 	ssize_t getread, getwrite;
 
@@ -47,14 +47,19 @@ int main(int argc, char **argv)
 		getwrite = write(fp2, buffer, getread);
 		if (getwrite == -1)
 		{
-			close(fp);
+			check = close(fp);
+			if (check == -1)
+			{
+				dprintf(fileno(stderr), "Error: Can't close fd %d\n", fp);
+				exit(100);
+			}
 			close(fp2);
 			return (-1);
 		}
 	}
 	if (getread == -1)
 	{
-		close(fp);
+		check = close(fp);
 		close(fp2);
 		return (-1);
 	}
