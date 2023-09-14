@@ -12,7 +12,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int i;
 
 	i = 0;
-	if (!(*head))
+	if (!(*head) || !head)
 		return (-1);
 	temp = *head;
 	if (index == 0)
