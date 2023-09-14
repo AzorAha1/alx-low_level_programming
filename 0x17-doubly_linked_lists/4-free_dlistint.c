@@ -8,11 +8,11 @@
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *newnode;
-
+	
+	newnode = head;
 	while (newnode)
 	{
-		newnode = head;
-		head = head->next;
 		free(newnode);
+		newnode = newnode->next;
 	}
 }
