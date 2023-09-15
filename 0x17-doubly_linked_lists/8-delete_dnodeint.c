@@ -25,7 +25,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 	i = 0;
-	if (temp == NULL)
+	if (temp == NULL || i < index)
 	{
 		return (-1);
 	}
