@@ -14,9 +14,8 @@ void hash_table_delete(hash_table_t *ht)
 		checker = ht->array[i];
 		while (checker)
 		{
-			checker = checker->next;
 			hash_node_t *temp = checker;
-
+			checker = checker->next;
 			free(temp);
 		}
 	}
