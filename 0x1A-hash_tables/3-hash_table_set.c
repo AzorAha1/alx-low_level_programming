@@ -10,10 +10,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index;
 
-	hash_node_t *node;
-	hash_node_t *checker;
+	hash_node_t *node, *checker;
 
-	if (key == NULL)
+	if (key == NULL || node == NULL)
 	{
 		return (0);
 	}
@@ -23,26 +22,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (checker != NULL)
 	{
 		if (strcmp(checker->key, key) == 0)
-        {
-            free(checker->value);
-            checker->value = strdup(value);
-            if (checker->value == NULL)
-            {
-                return (0);
-            }
-            return (1);
-        }
-        checker = checker->next;
+		{
+			free(checker->value);
+			checker->value = strdup(value);
+			if (checker->value == NULL)
+			{
+				return (0);
+			}
+			return (1);
+		}
+		checker = checker->next;
 	}
 	node = (hash_node_t *)malloc(sizeof(hash_node_t));
-	if (!node)
-	{
-		return (0);
-	}
-
 	node->key = strdup(key);
 	node->value = strdup(value);
-
 	if (!node->key || !node->value)
 	{
 		free(node->key);
@@ -52,6 +45,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	node->next = ht->array[index];
 	ht->array[index] = node;
-
 	return (1);
 }
