@@ -22,14 +22,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while (checker != NULL)
 	{
-		free(checker->value);
-		value = strdup(value);
-		if (checker->value == NULL)
-		{
-			return (0);
-		}
+		if (strcmp(checker->key, key) == 0)
+        {
+            free(checker->value);
+            checker->value = strdup(value);
+            if (checker->value == NULL)
+            {
+                return (0);
+            }
+            return (1);
+        }
         checker = checker->next;
-        return (1);
 	}
 	node = (hash_node_t *)malloc(sizeof(hash_node_t));
 	if (!node)
