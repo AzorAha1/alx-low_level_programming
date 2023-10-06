@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node, *checker;
 
 	node = NULL;
-	if (key == NULL || ht)
+	if (key == NULL || !ht)
 	{
 		return (0);
 	}
