@@ -30,6 +30,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				return (0);
 			}
+			free(node->key);
+			free(node->value);
+			free(node);
 			return (1);
 		}
 		checker = checker->next;
