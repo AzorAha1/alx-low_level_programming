@@ -16,11 +16,10 @@ void hash_table_delete(hash_table_t *ht)
 		{
 			checker = checker->next;
 			hash_node_t *temp = checker;
+
 			free(temp);
 		}
 	}
-	ht->array = NULL;
-    ht->size = 0;
-    free(ht->array);
+	free(ht->array);
 	free(ht);
 }
