@@ -11,6 +11,10 @@ void hash_table_print(const hash_table_t *ht)
 	int comma;
 
 	comma = 0;
+	if (!ht)
+	{
+		return;
+	}
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
