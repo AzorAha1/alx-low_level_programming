@@ -16,7 +16,10 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		hash_node_t *checker = ht->array[i];
 
-		
+		if (!checker)
+		{
+			continue;
+		}
 		if (comma == 1)
 		{
 			printf(", ");
