@@ -26,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 		}
 		while (checker)
 		{
-			printf("'%s' : '%s'", checker->key, checker->value);
+			printf("'%s': '%s'", checker->key, checker->value);
 			comma = 1;
 			checker = checker->next;
 		}
