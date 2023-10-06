@@ -10,8 +10,8 @@ void hash_table_print(const hash_table_t *ht)
 
 	int comma;
 
-	printf("{");
 	comma = 0;
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		hash_node_t *checker = ht->array[i];
@@ -20,12 +20,12 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			continue;
 		}
-		if (comma == 1)
-		{
-			printf(", ");
-		}
 		while (checker)
 		{
+			if (comma == 1)
+			{
+				printf(", ");
+			}
 			printf("'%s': '%s'", checker->key, checker->value);
 			comma = 1;
 			checker = checker->next;
