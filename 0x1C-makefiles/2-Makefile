@@ -1,6 +1,6 @@
 CC=gcc
 SRC=school.c main.c
-OBJ=main.o
+OBJ= school.o main.o
 NAME=school
 
 all: $(NAME)
@@ -10,4 +10,3 @@ $(NAME): $(OBJ)
 
 $(OBJ): $(SRC)
 	$(CC) -c $(SRC)
-
