@@ -2,21 +2,20 @@ CCWITHFLAGS=gcc -Wall -Werror -Wextra -pedantic
 SRC=school.c main.c
 NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
-HEADER=school.h
 
-.PHONY: clean oclean fclean re
 
 all: $(NAME)
 
 $(NAME): $(SRC:.c=.o)
 	$(CCWITHFLAGS) $^ -o $@
 
-%.o: %.c $(HEADER)
-	$(CCWITHFLAGS) -c $< -o $@
 
 clean:
-	$(RM) -f .*~ *~ *.swp $(SRC:.c=.o)
+	rm -f .*~ *~ *.swp $(NAME)
+
+oclean:
+	rm -f $(SRC:.c=.o)
 
 fclean: clean oclean
-	$(RM) -f $(NAME)
+	rm -f .*~ *~ *.swp $(NAME)
 re: fclean all
