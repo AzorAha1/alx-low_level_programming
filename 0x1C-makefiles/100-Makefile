@@ -15,12 +15,10 @@ school.o: school.c school.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f .*~ *~ *.swp $(SRC:.c=.o) $(NAME)
+	$(RM) -f .*~ *~ *.swp $(SRC:.c=.o) $(NAME)
 
-oclean:
-	rm -f $(SRC:.c=.o)
 
 fclean: clean oclean
-	rm -f $(NAME)
+	$(RM) -f $(NAME)
 
 re: fclean all
