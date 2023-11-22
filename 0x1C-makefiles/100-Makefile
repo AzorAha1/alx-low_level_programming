@@ -12,8 +12,8 @@ $(NAME): $(SRC:.c=.o)
 # main.o: main.c school.h
 # 	$(CCWITHFLAGS) -c $< -o $@
 
-school.o: school.c school.h
-	$(CC) $(CFLAGS) -c $< -o $@
+# school.o: school.c school.h
+# 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) .*~ *~ *.swp $(NAME)
