@@ -11,11 +11,11 @@ $(NAME): $(SRC:.c=.o)
 
 
 clean:
-	rm -f .*~ *~ *.swp $(NAME)
+	rm -f .*~ *~ *.swp $(SRC:.c=.o) $(NAME)
 
 oclean:
 	rm -f $(SRC:.c=.o)
 
 fclean: clean oclean
-	rm -f .*~ *~ *.swp $(NAME)
+	rm -f $(NAME)
 re: fclean all
