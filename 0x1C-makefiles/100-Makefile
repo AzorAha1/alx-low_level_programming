@@ -15,11 +15,8 @@ $(NAME): $(SRC:.c=.o)
 	$(CCWITHFLAGS) -c $< -o $@
 
 clean:
-	$(RM) -f .*~ *~ *.swp $(NAME)
-
-oclean:
-	$(RM) -f $(SRC:.c=.o)
+	$(RM) -f .*~ *~ *.swp $(SRC:.c=.o)
 
 fclean: clean oclean
-	rm -f .*~ *~ *.swp $(NAME)
+	rm -f $(NAME)
 re: fclean all
