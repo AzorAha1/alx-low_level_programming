@@ -8,10 +8,10 @@ all: $(NAME)
 $(NAME): $(SRC:.c=.o)
 	$(CCWITHFLAGS) $^ -o $@
 
-main.o: main.c
+main.o: main.c school.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-school.o: school.c
+school.o: school.c school.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
