@@ -12,4 +12,10 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(NAME)
+	rm -f .*~ *~ *.swap $(NAME)
+
+oclean:
+	rm -f $(OBJ)
+
+fclean:
+	rm -f .*~ *~ *.swap $(NAME) $(OBJ)
