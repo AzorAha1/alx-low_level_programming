@@ -19,7 +19,7 @@ clean:
 	$(RM) .*~ *~ *.swp $(NAME)
 
 oclean:
-	$(RM) $(SRC:.c=.o)
+	rm -f $(SRC:.c=.o)
 
 fclean: clean oclean
 	$(RM) $(NAME)
