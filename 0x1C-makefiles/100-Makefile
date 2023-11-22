@@ -2,7 +2,6 @@ CCWITHFLAGS=gcc -Wall -Werror -Wextra -pedantic
 SRC=school.c main.c
 NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
-RM=rm -f
 
 .PHONY: all clean oclean fclean re
 all: $(NAME)
