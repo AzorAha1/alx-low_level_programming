@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "school.c"
+#include "school.h"
 /**
 * main - main file
 * description - this is the description

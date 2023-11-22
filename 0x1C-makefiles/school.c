@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "school.h"
 /**
 * school - main file
 * description - this is the description
