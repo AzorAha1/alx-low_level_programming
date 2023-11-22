@@ -18,5 +18,5 @@ clean:
 	$(RM) -f .*~ *~ *.swp $(SRC:.c=.o)
 
 fclean: clean oclean
-	rm -f $(NAME)
+	$(RM) -f $(NAME)
 re: fclean all
