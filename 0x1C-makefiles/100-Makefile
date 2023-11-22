@@ -4,25 +4,16 @@ NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean oclean fclean re
-all: $(NAME)
-
-$(NAME): $(SRC:.c=.o)
-	$(CCWITHFLAGS) $^ -o $@
-
-# main.o: main.c school.h
-# 	$(CCWITHFLAGS) -c $< -o $@
-
-# school.o: school.c school.h
-# 	$(CC) $(CFLAGS) -c $< -o $@
-
+all: $(patsubt %.c, %.o $(SRC))
+	$(CCWITHFLAGS) $(patsubt %.c, %.o $(SRC)) -o $(NAME)
 clean:
-	$(RM) .*~ *~ *.swp $(NAME)
+	@(RM) .*~ *~ *.swp $(NAME)
 
 oclean:
 	rm -f $(SRC:.c=.o)
 
 fclean: clean oclean
-	$(RM) $(NAME)
+	@(RM) $(NAME)
 
 re: fclean all
 $(SRC): school.h
