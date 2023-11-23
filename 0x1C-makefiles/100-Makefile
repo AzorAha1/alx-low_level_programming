@@ -3,7 +3,7 @@ OBJ= $(SRC:.c=.o)
 CC=gcc
 NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
-RM=rm -f
+
 .PHONY=all clean ocean fclean re
 all: school.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
