@@ -1,25 +1,18 @@
 CCWITHFLAGS=gcc -Wall -Werror -Wextra -pedantic
 SRC=school.c main.c
+OBJ= $(SRC:.c=.o)
 NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
-
-.PHONY: all clean oclean fclean re
-all: $(NAME)
-
-$(NAME): $(SRC:.c=.o)
-	$(CCWITHFLAGS) $^ -o $@
-
-main.o: main.c school.h
-	$(CC) $(CFLAGS) -c $< -o $@
-
-school.o: school.c school.h
-	$(CC) $(CFLAGS) -c $< -o $@
+RM=rm -f
+.PHONY=all clean ocean fclean re
+all: school.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) .*~ *~ *.swp $(NAME)
 
 oclean:
-	$(RM) $(SRC:.c=.o)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
